@@ -4,4 +4,5 @@ body{
 .text{
     text-align: center;
     font-style: italic;
+    padding-top: 300px;
 }
