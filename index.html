@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>Figma.ma - Design Resources</title>
     <style>
         body{
@@ -18,9 +18,30 @@
     </style>
 </head>
 <body>
-    <div class="text">
+    <section class="text">
         <h1>Hello there !</h1>
         <em>You are beautiful.</em>
-    </div>
+    </section>
+    <script>
+        // from: https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/
+        function startAnimation() {
+          var locationEmojis = ['🏻', '🏼', '🏽', '🏾', '🏿'];
+          var titleEmojis = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+          var s = '', i, m;
+          for (let i = 0; i < 10; i ++) {
+            m = Math.floor(locationEmojis.length * ((Math.sin((Date.now()/100) + i)+1)/2));
+            s += '👶' + locationEmojis[m];
+          }
+          location.hash = s;
+          document.title = titleEmojis[Math.floor((Date.now()/100)%titleEmojis.length)] + ' Thank you for the coffee ~ ☕';
+          setTimeout(startAnimation, 50);
+        }
+    
+        if (window.frames.length != parent.frames.length) {
+          // console.log('iframe!')
+        } else {
+          startAnimation()
+        }
+      </script>
 </body>
 </html>
