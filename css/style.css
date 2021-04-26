@@ -4,5 +4,8 @@ body{
 .text{
     text-align: center;
     font-style: italic;
-    padding-top: 300px;
+    padding-top: 180px;
+}
+.text h3{
+    font-weight: inherit;
 }
